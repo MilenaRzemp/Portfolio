@@ -1,0 +1,952 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    width: 100vw;
+    overflow-x: hidden;    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    margin: auto;
+    /* left: 12vw; */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 599.99px) {
+    .text-container {
+        width: 50vw;
+    }
+    .photo {
+        width: 20vw;
+        margin-left: 16vw;
+        bottom: -3px;
+    }
+    .main-container {
+        width: 100vw;
+        gap: 5vw;
+        margin-left: 8vw;
+    }
+    .text-container {
+        font-size: 12px;
+    }
+    .circle1 {
+        width: 33vw;
+        height: 33vw;
+    }
+    .circle2 {
+        width: 37vw;
+        height: 37vw;
+    }
+    .circle3 {
+        width: 40vw;
+        height: 40vw;
+        bottom: -3vw;
+    }
+    .text2.active::before {
+        left: -2.5vw;
+        height: 250%;
+    }
+    .text3-bf {
+        left: calc(45% - 0px);
+        width: 10vw;
+        height: 9.25vw;
+        top: calc(29.9vw + 5.5px);
+    }
+    .skill1, .skill2, .skill3, .skill4 {
+        width: 90vw;
+    }
+    .skill1-2, .skill4-2 {
+        width: 60%;
+    }
+    .skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+        left: 43vw;
+    }
+    .skill-text1-1 {
+        width: 31vw;
+    }
+    .skill-text1-2 {
+        max-width: 40vw;
+    }
+    .skill-text2-1 {
+        max-width: 24vw;
+    }
+    .curve1 {
+        width: 8vw;
+    }
+    .skill-text2-2 {
+        width: 40vw;
+        left: -0.7vw;
+    }
+    .skill2-1 {
+        width: 55%;
+    }
+    .skill3-1 {
+        width: 45%;
+    }
+    .skill3-2 {
+        width: 55%;
+    }
+    .skill4-2.active::before {
+        top: -400%;
+    }
+    .work1-window, .work2-window {
+        left: -1vw;
+        top: 250px;
+    }
+    .work1-text, .work2-text {
+        width: 85vw;
+        height: 65vw;
+        left: 0;
+    }
+    .work1-line1, .work2-line1 {
+        left: 0;
+    }
+    .work1-line2 {
+        left: calc(85vw - 4px);
+    }
+    .background-images {
+        left: -15vw;
+        height: 100vh;
+        width: 115vw;
+    }
+    .work-planer {
+        visibility: hidden;
+    }
+    .curve2 {
+        left: 0;
+        width: 20vw;
+        height: 60vw;
+    }
+    .circle4 {
+        height: 300px;
+        width: 300px;
+    }
+    .circle4 div {
+        font-size: 0.95em;
+    }
+    .circle5 {    
+        height: 330px;
+        width: 330px;
+        top: -318px;
+        right: 15px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body{
+        left: 0;
+    }
+    .text-container {
+        width: 70vw;
+    }
+    .photo {
+        width: 14vw;
+        margin-left: 10vw;
+    }
+    .main-container {
+        width: 60vw;
+        gap: 6vw;
+    }
+    .circle1 {
+        width: 25vw;
+        height: 25vw;
+    }
+    .circle2 {
+        width: 28vw;
+        height: 28vw;
+    }
+    .circle3 {
+        width: 30vw;
+        height: 30vw;
+        bottom: -2.2vw;
+    }
+    .text2.active::before {
+        left: calc(-3.22vw - 2px);
+        height: 170%;
+    }
+    .text3-bf {
+        left: calc(50% - 0.3px);
+        width: 3vw;
+        height: 10vw;
+        top: calc(28vw + 4px);
+    }
+    .skill1, .skill2, .skill3, .skill4 {
+        width: 60vw;
+    }
+    .skill1-2, .skill4-2 {
+        width: 46%;
+    }
+    .skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+        left: 33vw;
+    }
+    .skill-text1-1 {
+        width: 20vw;
+    }
+    .skill-text1-2 {
+        max-width: 24vw;
+    }
+    .skill-text2-1 {
+        max-width: 18vw;
+    }
+    .curve1 {
+        width: 30vw;
+    }
+    .skill-text2-2 {
+        width: 20vw;
+        left: 2vw;
+    }
+    .skill2-1 {
+        width: 55%;
+    }
+    .skill3-1 {
+        width: 55%;
+    }
+    .skill3-2 {
+        width: 45%;
+    }
+    .skill4-2.active::before {
+        top: -600%;
+    }
+    .work1-window, .work2-window {
+        left: 4vw;
+        top: 300px;
+    }
+    .work1-text, .work2-text {
+        width: 48vw;
+        height: 33vw;
+        max-height: 500px;
+        left: -6vw;
+    }
+    .work1-line1, .work2-line1 {
+        left: -6vw;
+    }
+    .work1-line2 {
+        left: calc(42vw - 4px);
+    }
+    .background-images {
+        left: -30vw;
+        height: calc(100vh + 100px);
+        width: 100vw;
+    }
+    .curve2 {
+        left: -6vw;
+        width: 15vw;
+        height: 30vw;
+    }
+    .circle4 {
+        height: 400px;
+        width: 400px;
+    }
+    .circle4 div {
+        font-size: 1.2em;
+    }
+    .circle5 {    
+        height: 450px;
+        width: 450px;
+        top: -422px;
+        right: 22px;
+    }
+}
+
+@keyframes showing-up1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes showing-up2 {
+    0% {height: 0;}
+    100% {height: 100%;}
+}
+@keyframes rotate1 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(50deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: rotate(120deg);
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0);
+        transform-origin: right;
+    }
+    100% {
+        transform: rotate(180deg);
+        transform-origin: right;
+    }
+}
+@keyframes rotate4 {
+    0% {
+        transform: rotate(0);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: rotate(-180deg);
+        transform-origin: bottom;
+    }
+}
+@keyframes rotate5 {
+    0% {
+        transform: rotate(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: rotate(-180deg);
+        transform-origin: left;
+    }
+}
+@keyframes rotate6 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: rotate(-120deg);
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+@keyframes swing {
+    0% {
+        opacity: 0;
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        border-left-color: transparent;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        border-left-color: orange;
+        opacity: 1;
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: rotateY(100deg);
+        transform-origin: left;
+      }
+    
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+        transform-origin: left;
+    }
+}
+@keyframes slide-down {
+    0% {
+        top: -200%;
+    }
+    100% {
+        top: -15%;
+    }
+}
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vw;
+}
+
+.portrait-container {
+    position: relative;
+}
+
+.photo {
+    position: relative;
+    z-index: 4;
+    animation: showing-up1 1.8s ease-in;
+}
+
+.circle1 {
+    position: absolute;
+    bottom: 0.3vw;
+    right: -1.2vw;
+    background: orange;
+    border-radius: 50%;
+    z-index: 3;
+    animation: showing-up1 0.4s ease-in-out;
+}
+.circle2 {
+    position: absolute;
+    bottom: -1.2vw;
+    right: -2.7vw;
+    border-left: 4px solid orange;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 2;
+    transform: rotate(50deg);
+    animation: rotate1 1s linear;
+}
+.circle3 {
+    position: absolute;
+    right: -3vw;
+    border-left: 5px solid orange;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 1;
+    transform: rotate(-20deg);
+    animation: rotate2 1.8s linear;
+}
+
+.text-container {
+    font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vw;
+    position: relative;
+    left: -10vw;
+}
+
+.text1 {
+    opacity: 0;
+    animation: slide-left 1s linear forwards 2s;
+}
+
+.text2, .text3 {
+    opacity: 0;
+}
+.text2.active, .text3.active {
+    opacity: 1;
+    transition: 1s ease;
+    position: relative;
+}
+.text2.active::before {
+    content: "";
+    background: orange;
+    width: 4px;
+    position: absolute;
+    top: -200%;
+    animation: slide-down 0.7s linear forwards;
+}
+
+.text3-bf {
+    position: absolute;
+    opacity: 0;
+    border-bottom-left-radius: 3vw;
+    overflow: hidden;
+}
+.text3-bf.active {
+    opacity: 1;
+}
+.text3-bf.active::before {
+    content: "";
+    background: orange;
+    position: absolute;
+    top: -200%;
+    left: -100%;
+    width: 300%;
+    height: 200%;
+    border-bottom-left-radius: 50%;
+    animation: rotate4 1s ease-out forwards;
+}
+.text3-bf.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 4px;
+    top: -4px;
+    width: calc(100% + 4px);
+    height: 100%;
+    border-bottom-left-radius: 2.7vw;
+}
+
+.curve1 {
+    opacity: 0;
+    position: relative;
+    top: -9vw;
+    height: 15vw;
+    border-left: 4px solid orange;
+    animation: swing 1s linear forwards 1.8s;
+}
+
+/* SKILLS */
+.skills-container {
+    z-index: 3;
+    font-weight: 600;
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.logo {
+    width: 4vw;
+}
+
+.skill1, .skill2, .skill3, .skill4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill1-1, .skill4-1 {
+    width: 55%;
+}
+
+.skill1-2, .skill4-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2vw;
+    padding: 2vw;
+    padding-left: 0;
+    border-top-right-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+}
+.skill1-2.active {
+    position: relative;
+    transition: 1s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+.skill1-2.active::before {
+    content: "";
+    background: orange;
+    width: 700%;
+    height: 700%;
+    position: absolute;
+    right: 110%;
+    animation: rotate3 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    z-index: 2;
+}
+.skill1-2.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: -4px;
+    width: 100%;
+    height: calc(100% - 8px);
+    border-top-right-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+    z-index: 3;
+}
+
+.skill2-1, .skill3-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+    padding: 2vw;
+    padding-left: 2.5vw;
+    padding-right: 0;
+    border-top-left-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+    position: relative;
+    top: -4px;
+    opacity: 0;
+}
+.skill2-1.active, .skill3-1.active, .skill-text2-2.active {
+    opacity: 1;
+    transition: 1s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+.skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+    content: "";
+    background: orange;
+    width: 700%;
+    height: 900%;
+    position: absolute;
+    top: -400%;
+    animation: rotate5 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    z-index: 2;
+}
+.skill3-1.active::before {
+    animation: rotate5 2s cubic-bezier(0, 0.4, 0.3, 0.2) forwards;
+}
+.skill2-1.active::after, .skill3-1.active::after, .skill-text2-2.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 4px;
+    width: 100%;
+    height: calc(100% - 8px);
+    border-top-left-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+    z-index: 3;
+}
+.skill-text2-2.active::after {    
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 2.7vw;
+    top: 4px;
+    height: calc(100% - 4px);
+}
+
+.skill2-2 {
+    width: 45%;
+}
+
+.h5, .c3, .hct, .ai, .is {
+    opacity: 0;
+    z-index: 4;
+}
+.h5.active, .c3.active, .hct.active {
+    opacity: 1;
+    transition: 2s ease;
+}
+.js, .ap, .gp {
+    z-index: 4;
+}
+.ai.active, .is.active {    
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.2s;
+}
+
+.skill-text1, .skill-text2 {
+    position: relative;
+    top: -8px;
+    left: 15vw;
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    height: 12vw;
+    font-weight: 400;
+    opacity: 0;
+}
+.skill-text1.active, .skill-text2.active {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.skill-text2 {
+    top: -20px;
+    left: 2vw;
+    height: 20vw;
+}
+
+.skill-text1-1 {
+    height: 12vw;
+    border-top-right-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    /* border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
+    border-right: 4px solid orange; */
+}
+.skill-text1-1.active {
+    position: relative;
+    transition: 1s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+.skill-text1-1.active::before {
+    content: "";
+    background: orange;
+    width: 700%;
+    height: 900%;
+    position: absolute;
+    right: 100%;
+    top: -400%;
+    animation: rotate3 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    z-index: 2;
+}
+.skill-text1-1.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: -4px;
+    top: 4px;
+    width: 100%;
+    height: calc(100% - 8px);
+    border-top-right-radius: 2.7vw;
+    border-bottom-right-radius: 2.7vw;
+    z-index: 3;
+}
+
+.skill-text1-2, .skill-text2-1 {
+    padding: 1vw;
+}
+.skill-text1-2, .skill-text2-2 {
+    opacity: 0;
+}
+.skill-text1-2.active {
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.5s;
+}
+
+.skill3-1 {
+    top: -12px;
+}
+
+.skill4-1 {
+    width: 40%;
+}
+
+.skill4-2 {
+    position: relative;
+    top: -16px;
+    width: 60%;
+    opacity: 0;
+}
+.skill4-2.active {
+    opacity: 1;
+    transition: 1s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+.skill4-2.active::before {
+    content: "";
+    background: orange;
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    right: 110%;
+    animation: rotate3 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    z-index: 2;
+}
+.skill4-2.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: -4px;
+    width: 100%;
+    height: calc(100% - 8px);
+    border-top-right-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+    z-index: 3;
+}
+
+.skill-text2-1 {
+    position: relative;
+    left: 2vw;
+    z-index: 4;
+}
+
+.skill-text2-2 {
+    position: absolute;
+    top: 0;
+    height: 25vw;
+    border-top-left-radius: 3vw;
+}
+
+.text a {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: black;
+}
+
+
+/* WORK */
+
+.work1-window, .work2-window {
+    position: relative;
+}
+
+.work1-window a, .work2-window a {
+    color: black;
+}
+
+.work1-text, .work2-text {
+    position: relative;
+    border: 4px solid orange;
+    border-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    opacity: 0;
+}
+.work1-text.active, .work2-text.active {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+.work1-text {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: rgba(255,255,255,0.8);
+}
+.work2-text {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background: rgba(255,255,255,0.9);
+}
+
+.work1-window div:not(.work1-line1, .work1-line2), .work2-window div:not(.work2-line1) {
+    font-size: calc(11px + (22 - 11) * ((100vw - 300px) / (1600 - 300)));
+    padding: 10px;
+}
+
+.work1-text1, .work2-text1 {
+    font-weight: 600;
+}
+
+.work1-line1 {
+    position: absolute;
+    top: -300px;
+    height: 0;
+    width: 10px;
+    border-left: 4px solid orange;
+    z-index: 3;
+}
+.work1-line1.active {
+    height: 300px;
+    transition: 1s linear;
+}
+
+.work1-line2, .work2-line1 {
+    position: relative;
+    height: 60vh;
+    width: 4px;
+    background: transparent;
+    z-index: 3;
+}
+.work1-line2.active::before, .work2-line1.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: orange;
+    animation: showing-up2 1s forwards;
+}
+
+.curve2 {
+    position: relative;
+    border-bottom-left-radius: 3vw;
+    overflow: hidden;
+}
+.curve2.active::before {
+    content: "";
+    background: orange;
+    position: absolute;
+    top: -200%;
+    left: -100%;
+    width: 300%;
+    height: 200%;
+    border-bottom-left-radius: 50%;
+    animation: rotate4 2.2s ease-out forwards;
+}
+.curve2.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: 4px;
+    top: -4px;
+    width: calc(100% + 4px);
+    height: 100%;
+    border-bottom-left-radius: 2.7vw;
+}
+
+.contact {
+    position: relative;
+    height: 450px;
+    margin-bottom: 50px;
+    z-index: 5;
+}
+
+.circle4 {
+    position: relative;
+    background: orange;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 3;
+}
+.circle4.active {
+    opacity: 1;
+    transition: 0.5s linear;
+    transition-delay: 1.2s;
+}
+.circle4 div {
+    color: white;
+}
+.circle4 img {
+    height: 30px;
+}
+
+.contact-text1 {
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.contact-text2 {
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.circle5 {
+    position: relative;
+    border-right: 4px solid orange;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: 2;
+    transform: rotate(20deg);
+    opacity: 0;
+}
+.circle5.active {
+    animation: rotate6 1s linear;
+    opacity: 1;
+}
+
+.background-images {
+    z-index: 1;
+    position: absolute;
+    top: -200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: rgb(254,172,94);}
+.background-images.active {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+.work1-window .background-images {
+    background: linear-gradient(321deg, rgba(254,172,94,1) 0%, rgba(241,160,120,1) 10%, rgba(226,146,152,1) 32%, rgba(199,121,208,1) 63%, rgba(81,212,254,1) 100%);
+}
+.work2-window .background-images {
+    background: linear-gradient(45deg, rgba(77,7,46,1) 0%, rgba(79,11,54,1) 9%, rgba(83,24,79,1) 14%, rgba(102,103,171,1) 30%, rgba(102,103,171,1) 70%, rgba(229,229,227,1) 85%, rgba(241,241,227,1) 90%, rgba(247,247,227,1) 100%);
+}
+
+.work-planer {
+    position: absolute;
+    width: 85vw;
+}
+.work-planer.active {
+    transition: 1s linear;
+}
