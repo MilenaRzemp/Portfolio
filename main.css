@@ -21,9 +21,22 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+section {
+    position: absolute;
+    right: 1vw;
+}
+
+
 /* MEDIA */
 
 @media only screen and (max-width: 599.99px) {
+    body {
+        height: calc(100% - 500px);
+    }
+    section img {
+        max-height: 20px;
+        margin: 6px;
+    }
     .text-container {
         width: 50vw;
     }
@@ -55,7 +68,7 @@ body::-webkit-scrollbar {
     }
     .text2.active::before {
         left: -2.5vw;
-        height: 250%;
+        height: 270%;
     }
     .text3-bf {
         left: calc(45% - 0px);
@@ -69,24 +82,25 @@ body::-webkit-scrollbar {
     .skill1-2, .skill4-2 {
         width: 60%;
     }
-    .skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+    .skill2-1.active::before, .skill3-1.active::before {
         left: 43vw;
     }
     .skill-text1-1 {
         width: 31vw;
     }
     .skill-text1-2 {
-        max-width: 40vw;
+        max-width: 26vw;
     }
     .skill-text2-1 {
         max-width: 24vw;
+        left: 50vw;
     }
     .curve1 {
         width: 8vw;
     }
     .skill-text2-2 {
-        width: 40vw;
-        left: -0.7vw;
+        width: 60vw;
+        left: calc(25vw - 2.5px);
     }
     .skill2-1 {
         width: 55%;
@@ -100,7 +114,11 @@ body::-webkit-scrollbar {
     .skill4-2.active::before {
         top: -400%;
     }
-    .work1-window, .work2-window {
+    .work1-window {
+        left: -1vw;
+        top: -250px;
+    }
+    .work2-window {
         left: -1vw;
         top: 250px;
     }
@@ -109,24 +127,72 @@ body::-webkit-scrollbar {
         height: 65vw;
         left: 0;
     }
-    .work1-line1, .work2-line1 {
+    .work1-text {
+        background: linear-gradient(321deg, rgba(254,172,94,0.5) 0%, rgba(241,160,120,0.5) 10%, rgba(226,146,152,0.5) 32%, rgba(199,121,208,0.5) 63%, rgba(81,212,254,0.5) 100%);
+    }
+    .work2-text {
+        background: linear-gradient(45deg, rgba(77,7,46,0.4) 0%, rgba(79,11,54,0.4) 9%, rgba(83,24,79,0.4) 14%, rgba(102,103,171,0.4) 30%, rgba(102,103,171,0.4) 70%, rgba(229,229,227,0.4) 85%, rgba(241,241,227,0.4) 90%, rgba(247,247,227,0.4) 100%);
+    }
+    .work3-text {
+        width: 85vw;
+        height: 65vw;
+        left: -1vw;
+        top: -350px;
+        background: linear-gradient(90deg,rgba(28,213,176,.5),rgba(216,181,23,.5));
+    }
+    .work1-line1 {
+        top: -200px;
         left: 0;
     }
+    .work2-line1 {
+        top: -400px;
+        left: 0;
+        height: 30vh;
+    }
+    .work3-line1 {
+        top: -300px;
+        left: 82.8vw;
+        visibility: hidden;
+    }
     .work1-line2 {
+        height: 30vh;
+        top: 0px;
         left: calc(85vw - 4px);
+    }
+    .work2-line2 {
+        height: 30vh;
+        top: -300px;
+        left: calc(85vw - 4px);
+    }
+    .work3-line2 {
+        height: 15vh;
+        top: -350px;
+        left: -1vw;
     }
     .background-images {
         left: -15vw;
         height: 100vh;
         width: 115vw;
+        visibility: hidden;
+    }
+    .background-images3 {
+        left: -15vw;
+        top: -350px;
+        height: 100vh;
+        width: 115vw;
+        visibility: hidden;
     }
     .work-planer {
         visibility: hidden;
     }
+    .work3-window {
+        max-height: 200px;
+    }
     .curve2 {
-        left: 0;
-        width: 20vw;
-        height: 60vw;
+        left: -1vw;
+        top: -400px;
+        width: 45vw;
+        height: 85vw;
     }
     .circle4 {
         height: 300px;
@@ -141,11 +207,19 @@ body::-webkit-scrollbar {
         top: -318px;
         right: 15px;
     }
+    .contact {
+        top: -150px;
+        left: 6vw;
+    }
 }
 
 @media screen and (min-width: 600px) {
-    body{
+    body {
         left: 0;
+    }
+    section img {
+        max-height: 40px;
+        margin: 5px;
     }
     .text-container {
         width: 70vw;
@@ -173,7 +247,7 @@ body::-webkit-scrollbar {
     }
     .text2.active::before {
         left: calc(-3.22vw - 2px);
-        height: 170%;
+        height: 200%;
     }
     .text3-bf {
         left: calc(50% - 0.3px);
@@ -187,24 +261,25 @@ body::-webkit-scrollbar {
     .skill1-2, .skill4-2 {
         width: 46%;
     }
-    .skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+    .skill2-1.active::before, .skill3-1.active::before {
         left: 33vw;
     }
     .skill-text1-1 {
         width: 20vw;
     }
     .skill-text1-2 {
-        max-width: 24vw;
+        max-width: 20vw;
     }
     .skill-text2-1 {
         max-width: 18vw;
+        left: 30vw;
     }
     .curve1 {
         width: 30vw;
     }
     .skill-text2-2 {
         width: 20vw;
-        left: 2vw;
+        left: 30vw;
     }
     .skill2-1 {
         width: 55%;
@@ -218,7 +293,11 @@ body::-webkit-scrollbar {
     .skill4-2.active::before {
         top: -600%;
     }
-    .work1-window, .work2-window {
+    .work1-window {
+        left: 4vw;
+        /* top: 300px; */
+    }
+    .work2-window {
         left: 4vw;
         top: 300px;
     }
@@ -227,22 +306,81 @@ body::-webkit-scrollbar {
         height: 33vw;
         max-height: 500px;
         left: -6vw;
+        top: -200px;
+    }
+    .work1-text {
+        background: url(./img/planer-posilkow.PNG) fixed no-repeat center;
+        background-size: 55%;
+    }
+    .work1-text div {
+        background-color: white;
+        width: 110%;
+    }
+    .work2-text {        
+        background: url(./img/sklep.PNG) fixed no-repeat center;
+        background-size: 60%;
+    }
+    .work2-text div {
+        background-color: white;
+        width: 110%;
+    }
+    .work3-text {
+        width: 48vw;
+        height: 33vw;
+        max-height: 500px;
+        left: -2vw;
+        top: -200px;
+        background: url(./img/zwierzo-app.PNG) fixed no-repeat center;
+        background-size: 65%;
+    }
+    .work3-text div {
+        background-color: white;
+        width: 110%;
     }
     .work1-line1, .work2-line1 {
+        top: -400px;
         left: -6vw;
     }
-    .work1-line2 {
+    .work2-line1 {
+        height: 60vh;
+    }
+    .work3-line1 {
+        top: 0;
+        left: calc(46vw - 4px);
+        visibility: hidden;
+    }
+    .work3-line2 {
+        height: 60vh;
+        left: -2vw;
+        top: -250px;
+    }
+    .work1-line2{
+        height: 50vh;
+        top: -200px;
         left: calc(42vw - 4px);
+    }
+    .work2-line2 {
+        height: 40vh;
+        top: -400px;
+        left: calc(42vw - 4px);        
     }
     .background-images {
         left: -30vw;
         height: calc(100vh + 100px);
         width: 100vw;
+        visibility: hidden;
+    }
+    .background-images3 {
+        height: calc(100vh + 100px);
+        width: 100vw;
+        left: -26vw;
+        top: -50px;
     }
     .curve2 {
-        left: -6vw;
+        left: -2vw;
+        top: -200px;
         width: 15vw;
-        height: 30vw;
+        height: 35vw;
     }
     .circle4 {
         height: 400px;
@@ -256,6 +394,10 @@ body::-webkit-scrollbar {
         width: 450px;
         top: -422px;
         right: 22px;
+    }
+    .contact {
+        left: 5vw;
+        top: -400px;
     }
 }
 
@@ -430,7 +572,7 @@ body::-webkit-scrollbar {
 }
 
 .text-container {
-    font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(11px + (26 - 11) * ((100vw - 300px) / (1600 - 300)));
     font-style: italic;
     display: flex;
     flex-direction: column;
@@ -506,17 +648,22 @@ body::-webkit-scrollbar {
 .skills-container {
     z-index: 3;
     font-weight: 600;
-    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .logo {
     width: 4vw;
 }
 
-.skill1, .skill2, .skill3, .skill4 {
+.skill1, .skill2, .skill3, .skill4, .skill2a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.skill2a {
+    position: relative;
+    top: -8px;
 }
 
 .skill1-1, .skill4-1 {
@@ -526,7 +673,7 @@ body::-webkit-scrollbar {
 .skill1-2, .skill4-2 {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 2vw;
     padding: 2vw;
     padding-left: 0;
@@ -545,8 +692,19 @@ body::-webkit-scrollbar {
     width: 700%;
     height: 700%;
     position: absolute;
-    right: 110%;
+    right: 100%;
     animation: rotate3 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    z-index: 2;
+}
+.skill-text2-2.active::before {
+    content: "";
+    background: orange;
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    /* top: -350%; */
+    animation: rotate3 2s ease-out forwards;
     z-index: 2;
 }
 .skill1-2.active::after {
@@ -581,7 +739,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
     z-index: 1;
 }
-.skill2-1.active::before, .skill3-1.active::before, .skill-text2-2.active::before {
+.skill2-1.active::before, .skill3-1.active::before {
     content: "";
     background: orange;
     width: 700%;
@@ -594,7 +752,7 @@ body::-webkit-scrollbar {
 .skill3-1.active::before {
     animation: rotate5 2s cubic-bezier(0, 0.4, 0.3, 0.2) forwards;
 }
-.skill2-1.active::after, .skill3-1.active::after, .skill-text2-2.active::after {
+.skill2-1.active::after, .skill3-1.active::after {
     content: "";
     background: white;
     position: absolute;
@@ -605,9 +763,16 @@ body::-webkit-scrollbar {
     border-bottom-left-radius: 10vw;
     z-index: 3;
 }
-.skill-text2-2.active::after {    
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 2.7vw;
+.skill-text2-2.active::after {
+    content: "";
+    background: white;
+    position: absolute;
+    left: -4px;
+    width: 100%;
+    /* height: calc(100% - 8px); */
+    z-index: 3;
+    /* border-bottom-left-radius: 0; */
+    border-top-right-radius: 2.7vw;
     top: 4px;
     height: calc(100% - 4px);
 }
@@ -635,8 +800,8 @@ body::-webkit-scrollbar {
 
 .skill-text1, .skill-text2 {
     position: relative;
-    top: -8px;
-    left: 15vw;
+    top: -12px;
+    /* left: 15vw; */
     display: flex;
     align-items: center;
     padding: 1vw;
@@ -657,8 +822,8 @@ body::-webkit-scrollbar {
 
 .skill-text1-1 {
     height: 12vw;
-    border-top-right-radius: 3vw;
-    border-bottom-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius: 3vw;
     /* border-top: 4px solid orange;
     border-bottom: 4px solid orange;
     border-right: 4px solid orange; */
@@ -675,21 +840,21 @@ body::-webkit-scrollbar {
     width: 700%;
     height: 900%;
     position: absolute;
-    right: 100%;
+    left: 100%;
     top: -400%;
-    animation: rotate3 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
+    animation: rotate5 2s cubic-bezier(0.2, 0.7, 0.7, 0.2) forwards;
     z-index: 2;
 }
 .skill-text1-1.active::after {
     content: "";
     background: white;
     position: absolute;
-    left: -4px;
+    left: 4px;
     top: 4px;
     width: 100%;
     height: calc(100% - 8px);
-    border-top-right-radius: 2.7vw;
-    border-bottom-right-radius: 2.7vw;
+    border-top-left-radius: 2.7vw;
+    border-bottom-left-radius: 2.7vw;
     z-index: 3;
 }
 
@@ -706,7 +871,7 @@ body::-webkit-scrollbar {
 }
 
 .skill3-1 {
-    top: -12px;
+    top: -20px;
 }
 
 .skill4-1 {
@@ -749,15 +914,15 @@ body::-webkit-scrollbar {
 
 .skill-text2-1 {
     position: relative;
-    left: 2vw;
+    /* left: 20vw; */
     z-index: 4;
 }
 
 .skill-text2-2 {
     position: absolute;
-    top: 0;
+    top: -4px;
     height: 25vw;
-    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
 }
 
 .text a {
@@ -769,16 +934,26 @@ body::-webkit-scrollbar {
 
 /* WORK */
 
-.work1-window, .work2-window {
+.work1-window, .work2-window, .work3-window {
     position: relative;
 }
 
-.work1-window a, .work2-window a {
+.work1-window a, .work2-window a, .work3-window a {
     color: black;
 }
-
-.work1-text, .work2-text {
+.work1-text {
+    /* top: 0; */
     position: relative;
+}
+.work2-text {
+    top: -400px;
+    position: relative;
+}
+.work3-text {
+    position: relative;
+}
+.work1-text, .work2-text, .work3-text {
+    /* position: relative; */
     border: 4px solid orange;
     border-radius: 40%;
     display: flex;
@@ -788,7 +963,7 @@ body::-webkit-scrollbar {
     z-index: 3;
     opacity: 0;
 }
-.work1-text.active, .work2-text.active {
+.work1-text.active, .work2-text.active, .work3-text.active {
     opacity: 1;
     transition: 1s linear;
 }
@@ -796,17 +971,18 @@ body::-webkit-scrollbar {
 .work1-text {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
-    background: rgba(255,255,255,0.8);
+    /* background: rgba(255,255,255,0.8); */
 }
-.work2-text {
+.work2-text, .work3-text {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
-    background: rgba(255,255,255,0.9);
+    /* background: rgba(255,255,255,0.9); */
 }
 
-.work1-window div:not(.work1-line1, .work1-line2), .work2-window div:not(.work2-line1) {
+.work1-window div:not(.work1-line1, .work1-line2), .work2-window div:not(.work2-line1, .work2-line2), .work3-window div:not(.work3-line1, .work3-line2) {
     font-size: calc(11px + (22 - 11) * ((100vw - 300px) / (1600 - 300)));
     padding: 10px;
+    text-align: center;
 }
 
 .work1-text1, .work2-text1 {
@@ -815,25 +991,32 @@ body::-webkit-scrollbar {
 
 .work1-line1 {
     position: absolute;
-    top: -300px;
     height: 0;
     width: 10px;
     border-left: 4px solid orange;
     z-index: 3;
 }
-.work1-line1.active {
+.work3-line1 {
+    position: absolute;
+    height: 0;
+    width: 10px;
+    border-left: 4px solid orange;
+    z-index: 3;
+}
+.work1-line1.active, .work3-line1.active {
     height: 300px;
     transition: 1s linear;
 }
 
-.work1-line2, .work2-line1 {
+.work1-line2, .work2-line1, .work2-line2, .work3-line2 {
     position: relative;
-    height: 60vh;
+    /* top: -400px; */
+    /* height: 60vh; */
     width: 4px;
     background: transparent;
     z-index: 3;
 }
-.work1-line2.active::before, .work2-line1.active::before {
+.work1-line2.active::before, .work2-line1.active::before, .work2-line2.active::before, .work3-line2.active::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -870,7 +1053,7 @@ body::-webkit-scrollbar {
 
 .contact {
     position: relative;
-    height: 450px;
+    height: 250px;
     margin-bottom: 50px;
     z-index: 5;
 }
@@ -900,12 +1083,12 @@ body::-webkit-scrollbar {
 
 .contact-text1 {
     font-weight: 600;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .contact-text2 {
     font-weight: 400;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .circle5 {
@@ -930,10 +1113,25 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    background: rgb(254,172,94);}
-.background-images.active {
+    background: rgb(254,172,94);
+}
+.background-images.active, .background-images3.active {
     opacity: 1;
     transition: 1s linear;
+}
+
+.background-images3 {
+    z-index: 1;
+    position: absolute;
+    /* top: -50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
 
 .work1-window .background-images {
@@ -949,4 +1147,13 @@ body::-webkit-scrollbar {
 }
 .work-planer.active {
     transition: 1s linear;
+}
+
+.linkedin {
+    min-height: 70px;
+}
+
+.links-media {
+    display: flex;
+    align-items: center;
 }
